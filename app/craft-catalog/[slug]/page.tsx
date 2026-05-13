@@ -3,6 +3,7 @@ import CraftHero       from "@/components/custom/craft-catalog/CraftHero";
 import ChannelSidebar  from "@/components/custom/channel/ChannelSidebar";
 import CraftOverview   from "@/components/custom/craft-catalog/CraftOverview";
 import RelatedCrafts   from "@/components/custom/craft-catalog/RelatedCrafts";
+import PrimaryButton   from "@/components/custom/buttons/PrimaryButton";
 import { servicePages } from "@/data/craft-catalog/service-pages";
 
 // TODO: Replace PLACEHOLDER_BG with a real service photo per slug
@@ -82,15 +83,22 @@ export default async function ServiceDetailPage({
             {/* ── CTA banner ───────────────────────────────────────────── */}
             <div className="banner-craft ia-bg-sky fadeInUp wow is-visible">
               <div className="inner">
-                <div className="content-entry p3">
-                  <p>
-                    <strong>Ready to book?</strong>{" "}
-                    Call{" "}
-                    <a href="tel:6464934904">(646) 493-4904</a>{" "}
-                    for same-day scheduling, or{" "}
-                    <a href="/contact-us">send us a message online</a>.
-                    We give you a price before we start — no surprises.
-                  </p>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "2.4rem", flexWrap: "wrap" }}>
+                  <div className="content-entry p3" style={{ flex: 1, minWidth: "24rem" }}>
+                    <p>
+                      <strong>Ready to book?</strong>{" "}
+                      Call{" "}
+                      <a href="tel:6464934904">(646) 493-4904</a>{" "}
+                      for same-day scheduling, or{" "}
+                      <a href="/contact-us">send us a message online</a>.
+                      We give you a price before we start — no surprises.
+                    </p>
+                  </div>
+                  <PrimaryButton
+                    label="Call (646) 493-4904"
+                    href="tel:6464934904"
+                    dark={true}
+                  />
                 </div>
               </div>
             </div>

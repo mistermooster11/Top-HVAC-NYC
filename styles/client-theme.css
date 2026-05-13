@@ -222,13 +222,6 @@
 /* These are set as inline styles in Testimonial.tsx — no CSS override needed */
 
 /* ── ia-bg-sky Sections ──────────────────────────────────────
-   ia-bg-sky = black background in PHR. Text = white, headings = feature color.
+   ia-bg-sky = light sky blue (#a1c5d3) — defined in craft-catalog.css.
+   We intentionally do NOT override this here so it stays sky blue.
    ─────────────────────────────────────────────────────────── */
-.ia-bg-sky {
-  background: var(--brand-topnav);
-  color: #ffffff;
-}
-.ia-bg-sky h1, .ia-bg-sky h2, .ia-bg-sky h3,
-.ia-bg-sky h4, .ia-bg-sky h5, .ia-bg-sky h6 {
-  color: var(--brand-feature);
-}

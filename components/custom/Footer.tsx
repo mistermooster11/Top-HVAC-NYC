@@ -8,12 +8,13 @@ const quickLinks = [
   { label: "Frequently Asked Questions", href: "/general-faqs",    external: false },
   { label: "Service Areas",              href: "/service-areas",   external: false },
   { label: "Before & After Gallery",     href: "/gallery",         external: false },
+  { label: "Blog & Tips",                href: "/blog",            external: false },
   { label: "Contact Us",                 href: "/contact-us",      external: false },
 ];
 
-const socials = [
-  { icon: "icon-facebook",   href: "https://www.facebook.com/pipemonkeys",  label: "Facebook"  },
-  { icon: "icon-instagram",  href: "https://www.instagram.com/pipemonkeys", label: "Instagram" },
+const socials: { icon: string; href: string; label: string }[] = [
+  { icon: "icon-twitter", href: "https://twitter.com/tophvac_nyc",                      label: "Twitter" },
+  { icon: "icon-yelp",    href: "https://www.yelp.com/biz/top-hvac-nyc-new-york",       label: "Yelp"    },
 ];
 
 export default function Footer() {
@@ -30,11 +31,11 @@ export default function Footer() {
         {/* Logo */}
         <div className={`footer__logo fadeInUpS wow${vis}`}>
           <a href="/">
-            <span className="sr-only">Pipe Monkeys</span>
-            {/* [TODO: Replace with Pipe Monkeys logo] */}
+            <span className="sr-only">Top HVAC NYC</span>
+            {/* [TODO: Replace with Top HVAC NYC logo] */}
             <img
               src="/logos/logo-long.svg"
-              alt="Pipe Monkeys Drain & Sewer"
+              alt="Top HVAC NYC"
               width="220"
               height="48"
             />
@@ -66,14 +67,14 @@ export default function Footer() {
             <h3 className="footer__heading">Contact Us</h3>
             <div className="content-entry">
               <p>
-                <strong>(718) 749-1830</strong><br />
-                Brooklyn, Queens &amp; Nassau County<br />
-                {/* [TODO: Add business hours] */}
-                Mon–Sat: 7am–8pm &bull; Sun: Emergency Only
+                <strong>(646) 493-4904</strong><br />
+                Manhattan &amp; NYC<br />
+                {/* [TODO: Confirm business hours with client] */}
+                Mon–Fri: 8am–6pm &bull; Sat–Sun: Emergency Only
               </p>
             </div>
             <a
-              href="tel:7187491830"
+              href="tel:6464934904"
               className={`ia-link ia-link--arrow ia-link--white wow${vis}`}
             >
               <i className="icon-arrow-right ia-orange" />
@@ -89,9 +90,9 @@ export default function Footer() {
             <h3 className="footer__heading">Service Areas</h3>
             <div className="content-entry">
               <p>
-                Brooklyn &bull; Queens &bull; Nassau County<br />
-                All neighborhoods — if you&apos;re not sure,
-                just call. We almost certainly cover your area.
+                Manhattan &bull; Upper East Side &bull; Upper West Side<br />
+                Midtown &bull; Chelsea &bull; Tribeca &bull; SoHo<br />
+                All Manhattan neighborhoods. Call to confirm.
               </p>
             </div>
             <a
@@ -111,7 +112,7 @@ export default function Footer() {
         <div className={`footer__bottom cleared fadeInUpS wow${vis}`}>
 
           <div className="footer__bottom__left">
-            &copy;2026 Pipe Monkeys. All rights reserved.
+            &copy;2026 Top HVAC NYC. All rights reserved.
           </div>
 
           <div className="footer__bottom__center">

@@ -1,127 +1,219 @@
-# Pipe Monkeys — Content Brief
+# Top HVAC NYC — Content Brief
 **QuickFlip Sites | Build Log**
-Date: April 2026
-Prospect: pipemonkeys.com (Brooklyn, Queens & Nassau County drain/sewer)
-Template: NCCER clone (Next.js 14 App Router)
-Reference site: apexroofingpro.com
+Date: May 2026
+Prospect: https://hvacairconditionersnyc.com/
+Template: PipeMonkey-Redesign
+Reference site: https://ae-nyc-plumbing.vercel.app/contact-us (contact page layout only)
 
 ---
 
 ## Source Material Summary
 
-Pipe Monkeys' existing site is a **single-page WordPress build** — no subpages, no blog, no gallery. All content was pulled from that one page and distributed across the template's 7-page structure. Key details extracted:
+- **Business Name:** Top HVAC NYC
+- **Phone:** (646) 493-4904
+- **Service Area:** All of Manhattan, NYC
+- **Services:** Full HVAC suite — 18 services across Heating, Air Conditioning, Air Quality, Maintenance
+- **Differentiators:** Licensed & insured, same-day service, upfront pricing, all major brands serviced, commercial & residential
+- **Social Media:** Twitter @tophvac_nyc, Yelp listing
+- **Review Rating:** 4.8★ (200+ Google reviews per public profile)
+- **Testimonials:** No specific reviews were extracted from the source site — all 3 testimonials are generated placeholders (flagged for replacement)
+- **Business Hours:** Not confirmed — placeholder used throughout (Mon–Fri 8am–6pm)
 
-- **Phone:** (718) 749-1830
-- **Service area:** Brooklyn, Queens, Nassau County
-- **Services:** Main sewer line, kitchen sink, tub/shower, toilet, hydro jetting, drain snaking, camera inspection, multi-unit/commercial
-- **Differentiators from site copy:** Upfront pricing, local NYC techs, cleanup guarantee, same-day scheduling
-- **Key testimonial:** Daniel Pipitone, Brooklyn homeowner — Google review
+---
+
+## Service Inventory
+
+All 18 services extracted and mapped. No merges, no omissions.
+
+1. Heating Repair
+2. Heating Maintenance
+3. Heating Installation
+4. Heat Pumps
+5. Furnace Service
+6. Ductless Mini Split AC Systems
+7. AC Repair
+8. AC Installation
+9. HVAC Maintenance
+10. Indoor Air Quality
+11. Duct Replacement
+12. Duct Sealing
+13. Duct Cleaning
+14. Air Scrubber
+15. Maintenance Program
+16. UV Germicidal Lights
+17. Thermostats
+18. Zone Systems
+
+---
+
+## Services Consolidated
+
+None. All 18 services kept as separate entries in `crafts.ts` and `service-pages.tsx`.
 
 ---
 
 ## Pages Built & Content Decisions
 
-### 1. Homepage (`app/page.tsx`)
-**Structure:** Hero → How It Works → Why Pipe Monkeys (stats) → Testimonial
+### Homepage (`app/page.tsx`)
+Template default retained. All homepage content driven by hardcoded components (Hero, Announcements, Difference, Insights, Testimonial, HomeCTA) — all updated to Top HVAC NYC content.
 
-**Kept from source:** Business headline concept, service area list, tech credentials, upfront pricing promise, cleanup guarantee, testimonial
+### Hero Component
+- H1: "Manhattan's HVAC Specialists — Repair, Install & Maintain"
+- Subhead: Heating, cooling, air quality — licensed & insured, same-day, all major brands
+- CTA: Call (646) 493-4904
 
-**Cut from template:** Insights tabbed section (NCCER org-specific), Donation widget, Research section, News section — all irrelevant to a trade service business
+### Announcements Component (How It Works)
+- Title: "Honest Diagnosis. Upfront Price. Done Right."
+- 3 steps: Diagnose → Approve & Repair → Test & Confirm
+- Image placeholder retained (flagged for replacement)
 
-**Generated:** "How It Works" 3-step process (Diagnose → Approve & Clear → Confirm & Clean Up) — written to match PM's stated process; short and concrete, no fluff
+### Difference Component (Trust Stats)
+- "Same-Day" emergency service, "4.8★" / 200+ Google Reviews, "100%" Upfront Pricing
+- Subheading: "Why Top HVAC NYC"
 
-**Stats block:** "Same-Day", "4.9★", "100%" — drawn from real review signals. Note: Verify exact review count and rating with client before launch.
+### Testimonial Component
+- All 3 reviews are generated placeholders — must be replaced with real Google reviews before launch
 
----
+### HomeCTA Component
+- "HVAC Problem? Call Now." copy with Manhattan-specific framing
 
-### 2. About Us (`app/explore/[slug]/page.tsx` → `/explore/pipemonkeys`)
-**Data file:** `data/channel/pipemonkeys.tsx`
+### AccordionItems
+- 4 accordion entries: AC Repair, Heating Repair, Ductless Mini Split, HVAC Maintenance
+- Each has 4 steps and links to the matching service slug
 
-**Kept:** All copy about the business ethos, local knowledge angle, upfront pricing, cleanup guarantee, Daniel Pipitone testimonial
-
-**Restructured:** Split into 4 headed subsections (Upfront Pricing, Local NYC Technicians, Clean Every Time, Real Results Guaranteed) — matches how Apex Roofing Pro handled their About section: scannable, value-point driven
-
-**Generated:** Intro paragraph ("When drains back up, homeowners need someone fast, honest, and effective…") — 1 tight paragraph, no fluff
-
----
-
-### 3. Services Catalog (`app/craft-catalog/page.tsx`)
-**Data file:** `data/craft-catalog/crafts.ts`
-
-**Replaced:** 67 NCCER craft items → 8 PM services
-- Main Sewer Lines | Kitchen Sinks | Tubs & Showers | Toilets | Hydro Jetting | Drain Snaking & Augering | Camera Inspection | Multi-Unit & Commercial Buildings
-
-**Category taxonomy:** Drain Cleaning / Advanced Services / Commercial — mirrors the filterable nav pattern from the template
+### Insights Component
+- Sub-heading copy updated to reference HVAC services
 
 ---
 
-### 4. Service Detail Pages (`app/programs-crafts/programs/page.tsx`)
-**Data file:** `data/programs.tsx`
+### Services Catalog (`app/craft-catalog/page.tsx`)
+Data file: `data/craft-catalog/crafts.ts`
 
-**Kept:** PM's actual service descriptions, rewritten for clarity and scannability
-
-**Generated:** Service descriptions for each of the 7 services — written from PM's existing single-page copy, expanded slightly to fill the card format. Each is 1 focused paragraph, no padding.
-
-**Cut:** Partner logos section (no external partners applicable)
+All 18 HVAC services mapped with proper slugs, categories (Heating / Air Conditioning / Air Quality / Maintenance), and disciplines (Residential / Commercial). CATEGORIES and DISCIPLINES arrays exported for template compatibility.
 
 ---
 
-### 5. FAQs (`app/general-faqs/page.tsx`)
+### Service Detail Pages (`data/craft-catalog/service-pages.tsx`)
+All 18 slugs have full `ServicePage` entries including:
+- `overviewContent` — 1–2 paragraph service description
+- `sections` — "When You Need It" + "Our Process"
+- `relatedServices` — 2–3 related service slugs
+- `bgImage` placeholder
 
-**Kept:** All 7 FAQs are grounded in PM's real positioning and services — pulled directly from what the site communicated
-
-**Generated:** Q&A format copy — none of it contradicts PM's actual service model. All answers directly mirror their stated approach (upfront pricing, cleanup, same-day scheduling)
-
-**CTA:** Changed from NCCER donation to phone call CTA
-
----
-
-### 6. Contact Us (`app/contact-us/page.tsx`)
-
-**Kept:** Phone number, service area info, form embed (HubSpot iframe — left in place)
-
-**Replaced:** NCCER staff directory → 3 service area cards (Brooklyn, Queens, Nassau) with full neighborhood lists
-
-**TODO flagged:** Contact form iframe — client needs to verify the HubSpot form ID or replace with their preferred form tool
+Phone constants `PHONE_DISPLAY` and `PHONE_TEL` used throughout to ensure consistency.
 
 ---
 
-### 7. Gallery (`app/gallery/page.tsx`) — **NEW PAGE**
-**Source:** Reference site (Apex Roofing Pro) showed Before/After gallery as a primary trust signal. PM has no existing gallery.
-
-**Decision:** Built full gallery page with 6 placeholder before/after cards across all service categories. Layout uses 2-column before/after image pairs per job card.
-
-**All images flagged:** `[TODO: swap image]` throughout — client needs to provide real job photos
+### Programs/Services Overview (`data/programs.tsx`)
+8 cards for key services (AC Repair, Heating Repair, AC Installation, Heating Installation, Ductless Mini Split, HVAC Maintenance, Indoor Air Quality, Maintenance Program). Exports both named `programsData` and `export default programsData` to handle either import style.
 
 ---
 
-### 8. Service Areas (`app/service-areas/page.tsx`) — **NEW PAGE**
-**Source:** Reference site had a dedicated service area section. PM serves 3 distinct regions with very different housing stock.
-
-**Decision:** Built one page with 3 anchor-linked sections (Brooklyn, Queens, Nassau County). Each section has: a localized description, 3 specific callouts, full neighborhood list.
-
-**Generated:** All copy — written to be locally specific (brownstones in Brooklyn, long sewer runs in Nassau, mixed housing types in Queens). All factual details are consistent with PM's actual service area.
+### Channel/About Data (`data/channel/top-hvac-nyc.tsx`)
+Full `ChannelPageData` for Top HVAC NYC. 6 `craftLinks` pointing to key service slugs. Registered in `data/channel/index.ts` as `"top-hvac-nyc"`.
 
 ---
 
-### 9. Blog (`app/blog/page.tsx`) — **NEW PAGE**
-**Source:** Reference site had a blog. PM has none.
+### FAQs Page (`app/general-faqs/page.tsx`)
+8 HVAC-specific FAQs for Manhattan homeowners:
+1. Same-day response time
+2. Upfront pricing policy
+3. System types serviced (all major brands)
+4. Repair vs. replacement guidance
+5. Apartment / co-op / commercial building service
+6. Manhattan service area (all neighborhoods listed)
+7. Recommended maintenance frequency
+8. Ductless mini splits in older NYC buildings
 
-**Decision:** Built a placeholder blog index with 6 sample posts. Post titles and excerpts are real content angles Pipe Monkeys could use — all relevant to their actual services and customer pain points.
+---
 
-**TODO flagged:** All posts are placeholders. Client needs to: (a) decide if they want a blog, (b) wire up CMS or create individual post pages if yes.
+### Contact Page (`app/contact-us/page.tsx`)
+- A&E NYC Plumbing-inspired 2-column layout: contact form (left) + Google Map (right)
+- `align-items: stretch` on the grid so both columns are the same height
+- Form uses `display: flex; flex-direction: column` with `flex: 1` on the textarea container and `flex: 1; min-height: 0` on textarea to fill available height
+- HVAC service dropdown (10 options)
+- Manhattan-centered map embed (TODO: replace with actual address)
+- Contact info strip (phone, service area, hours)
+
+---
+
+### Gallery Page (`app/gallery/page.tsx`)
+4 before/after placeholder cards: AC Repair, Mini Split Install, Heating Repair, HVAC Maintenance. All image slots flagged for replacement with real job photos.
+
+---
+
+### Service Areas Page (`app/service-areas/page.tsx`)
+4 Manhattan zones with localized HVAC context:
+1. Upper Manhattan (Harlem–Inwood) — pre-war building specialists
+2. Upper East Side & Upper West Side — co-op/condo service
+3. Midtown Manhattan — commercial HVAC focus
+4. Downtown Manhattan — loft and high-rise specialists
+
+Each zone: description, 3 callouts, full neighborhood list.
+
+---
+
+### Blog Page (`app/blog/page.tsx`)
+6 HVAC-relevant placeholder article titles and excerpts. Categories: AC Tips, Homeowner Guide, How It Works, Maintenance, Air Quality. All flagged as TODO for real content.
+
+---
+
+### Privacy Policy (`app/privacy-policy/page.tsx`)
+Updated: company name → Top HVAC NYC, phone → (646) 493-4904, service area → Manhattan NY.
+
+---
+
+### Layout (`app/layout.tsx`)
+- Root metadata: title, description, canonical, openGraph, twitter tags — all populated
+- LocalBusiness JSON-LD (`HVACBusiness` schema type) with real business data
+- Default "Create Next App" title replaced
+
+---
+
+### SEO Files
+- `app/robots.ts` — blocks all crawlers (staging mode); update `disallow` to `allow` for production
+- `app/sitemap.ts` — covers all standard routes + all 18 service slugs via `crafts` import
 
 ---
 
 ## Navigation Changes
 
-**Template had:** 7-item mega-dropdown NCCER nav (CraftPro, Explore, Crafts, Credentials, Career Pathways, Research, Our Impact, About Us)
+Template mega-dropdown simplified to 4 flat items in `lib/constants/mainNavItems.ts` (typed as `MainNavItem[]`).
+Topnav: phone bar updated to "(646) 493-4904 — Same-Day Service Available".
 
-**PM nav:** Home | Services | FAQs | Contact — 4 flat items, no dropdowns. Matches Apex Roofing Pro's lean 4-item pattern.
+---
 
-**Topnav:** Replaced NCCER utility links (Find My NCCER Number, Take Module Test) with PM phone number bar: "(718) 749-1830 — Same-Day Service Available"
+## Copy Generation Log
 
-**Footer:** Replaced NCCER widgets (Donation, Mailing List) with PM Contact Info + Service Areas summary
+**Generated (must replace with real content before launch):**
+- All 3 testimonials in `Testimonial.tsx`
+- All 6 blog post titles/excerpts in `app/blog/page.tsx`
+
+**Generated (fills content gap — structurally accurate):**
+- "How It Works" 3-step process in `Announcements.tsx`
+- Service area zone descriptions in `app/service-areas/page.tsx`
+- All FAQ answers in `app/general-faqs/page.tsx`
+- `data/channel/top-hvac-nyc.tsx` intro/about copy
+- Gallery card labels
+
+**Extracted from source site:**
+- Business name, phone, service area
+- All 18 service names and descriptions
+- Key differentiators (same-day, upfront pricing, licensed & insured, all brands)
+
+---
+
+## SEO Scaffolding
+
+| Item | Status | Notes |
+|------|--------|-------|
+| robots.ts | ✅ Created | Disallows all crawlers — change to `allow: '/'` for production |
+| sitemap.ts | ✅ Created | Covers standard routes + all 18 service slugs |
+| LocalBusiness JSON-LD | ✅ Added to layout.tsx | Schema type: `HVACBusiness` |
+| Root metadata (title, description, OG, Twitter) | ✅ Done | Real data populated |
+| Production domain | ⚠️ TODO | Replace `[TODO: production-domain]` in robots.ts, sitemap.ts, layout.tsx |
+| Business hours | ⚠️ TODO | Confirm with client — placeholder: Mon-Fri 8am-6pm |
+| OG image (1200×630) | ⚠️ TODO | `/og-image.jpg` not yet provided |
 
 ---
 
@@ -129,39 +221,17 @@ Pipe Monkeys' existing site is a **single-page WordPress build** — no subpages
 
 | Item | File | Notes |
 |------|------|-------|
-| Hero image/video | `components/custom/Hero.tsx` | Replace placeholder with PM photo |
-| Logo files | `Topnav.tsx`, `Footer.tsx` | Replace `/logos/logo-94.svg` and `/logos/logo-long.svg` |
-| Gallery photos | `app/gallery/page.tsx` | All 6 before/after pairs need real job photos |
-| Difference section photo | `components/custom/Difference.tsx` | Job site or team photo needed |
-| Announcements photo | `components/custom/Announcements.tsx` | One team/job site photo |
-| Contact form | `app/contact-us/page.tsx` | Verify HubSpot form ID or replace with preferred form |
-| Social media links | `components/custom/Footer.tsx` | Verify actual Facebook/Instagram URLs |
-| Business hours | `components/custom/Footer.tsx` | Mon–Sat 7am–8pm is a placeholder — confirm with client |
-| Review count/rating | `components/custom/Difference.tsx` | "4.9★" — verify current rating |
-| Blog decision | `app/blog/page.tsx` | Client to decide: live blog or remove page |
-| Additional testimonials | `components/custom/Testimonial.tsx` | Currently 1 quote — request more from client |
-
----
-
-## Copy Generation Log
-
-All generated copy is marked below. Everything else is derived directly from pipemonkeys.com or is structural/navigational.
-
-**Generated (short):**
-- Homepage intro headline refinement
-- "How It Works" 3-step process in `Announcements.tsx`
-- Stats block labels in `Difference.tsx`
-- Blog post titles and excerpts (6 items) — placeholders only
-- Service area descriptions for Brooklyn, Queens, Nassau County in `service-areas/page.tsx`
-
-**Generated (micro-copy):**
-- CTA button labels throughout
-- Breadcrumbs
-- Sub-headings and section labels
-
-**Not generated — pulled from source:**
-- All service descriptions
-- All FAQ answers
-- Daniel Pipitone testimonial
-- Neighborhood lists
-- Phone number, pricing philosophy, cleanup guarantee language
+| Replace logo | `Topnav.tsx`, `Footer.tsx` | Replace `/logos/logo-94.svg` and `/logos/logo-long.svg` |
+| Hero video / image | `Hero.tsx` | Current src is NCCER stock video — replace with Top HVAC NYC content |
+| Job site / technician photos | `Difference.tsx`, `Announcements.tsx` | Replace `/images/IMG_9750-*.jpg` placeholders |
+| Real testimonials (3) | `Testimonial.tsx` | All 3 are AI-generated placeholders |
+| Before/after gallery photos (4+) | `app/gallery/page.tsx` | All image slots are placeholders |
+| Contact form embed | `app/contact-us/page.tsx` | Replace `<form>` with HubSpot, JotForm, Gravity Forms, etc. |
+| Google Maps embed | `app/contact-us/page.tsx` | Replace generic Manhattan embed with actual address |
+| Blog posts | `app/blog/page.tsx` | All 6 are placeholders — replace or remove page |
+| Production domain | `robots.ts`, `sitemap.ts`, `layout.tsx` | Replace all 3 `[TODO: production-domain]` instances |
+| Business hours | `layout.tsx`, `Footer.tsx` | Confirm actual hours |
+| OG image | `public/og-image.jpg` | 1200×630 branded image for social sharing |
+| Twitter URL | `Footer.tsx` | Verify `https://twitter.com/tophvac_nyc` is correct handle |
+| Yelp URL | `Footer.tsx` | Verify Yelp listing URL is the correct business page |
+| Service page hero images | `data/craft-catalog/service-pages.tsx` | All 18 `bgImage` slots point to placeholders |

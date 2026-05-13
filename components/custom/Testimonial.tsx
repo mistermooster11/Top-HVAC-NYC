@@ -3,33 +3,34 @@
 import { useRef, useState, useEffect, useCallback } from "react";
 import { useInView } from "framer-motion";
 
-// TODO: Replace placeholder reviews with real Google reviews from Pipe Monkeys.
-// Daniel Pipitone is confirmed real. The others are placeholders — request from client.
+// TODO: Replace placeholder reviews with real Google reviews from Top HVAC NYC.
+// All three are placeholders — request actual reviews from client before launch.
 const testimonials = [
   {
-    id: "daniel-pipitone",
+    id: "review-1",
+    // TODO: Replace with a real Google review from Top HVAC NYC
     quote:
-      "Professional service with a very fair price. They send you info about the assigned technician in advance and showed up exactly on time. They cleaned up nicely after snaking a drain line on the 2nd floor of a 3 story building. Forget Roto Rooter — Pipe Monkeys will be my new go-to for plumbing needs.",
-    name: "Daniel Pipitone",
-    position: "Brooklyn Homeowner",
+      "AC went out during a heat wave and they had a tech here the same afternoon. He diagnosed the problem in 15 minutes, gave me the price right then, and had it running within the hour. No upselling, no nonsense. This is exactly what you want from an HVAC company in the city.",
+    name: "James Whitfield",
+    position: "Upper West Side Resident",
     platform: "Google Review ★★★★★",
   },
   {
-    id: "maria-santos",
-    // TODO: Replace with a real Google review from client
+    id: "review-2",
+    // TODO: Replace with a real Google review from Top HVAC NYC
     quote:
-      "Called at 9am with a completely backed up kitchen drain. Tech was here by 11, cleared it in under an hour. He explained exactly what caused the clog and how to prevent it. Pricing was upfront and fair — no pushing extras I didn't need. Will absolutely use them again.",
-    name: "Maria Santos",
-    position: "Queens Homeowner",
+      "Had three companies look at my heating system before calling Top HVAC NYC. They were the only ones who actually explained what was wrong instead of just quoting a full replacement. Simple fix, fair price, and the heat was back on the same day. Honest guys.",
+    name: "Patricia Moreno",
+    position: "Midtown Manhattan",
     platform: "Google Review ★★★★★",
   },
   {
-    id: "james-oconnor",
-    // TODO: Replace with a real Google review from client
+    id: "review-3",
+    // TODO: Replace with a real Google review from Top HVAC NYC
     quote:
-      "Had a main line backup that two other companies couldn't fully clear. Pipe Monkeys came the same afternoon, ran a camera first so we could see exactly what was in there, then jetted it clean. You could see the difference on the camera footage after. Highly recommend for any serious sewer issue.",
-    name: "James O'Connor",
-    position: "Nassau County Homeowner",
+      "We manage several commercial spaces in Manhattan and Top HVAC NYC handles all our HVAC maintenance. They show up on time, document everything, and flag issues before they become expensive. Exactly what a property manager needs.",
+    name: "David Chen",
+    position: "Commercial Property Manager",
     platform: "Google Review ★★★★★",
   },
 ];

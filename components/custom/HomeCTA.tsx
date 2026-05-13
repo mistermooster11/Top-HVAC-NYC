@@ -19,20 +19,21 @@ export default function HomeCTA() {
           Same-Day Service Available
         </div>
         <h2 className={`h2 wow fadeInUpS${vis}`} style={{ animationDelay: "0.15s" }}>
-          Don&apos;t Wait — Call Now
+          HVAC Problem? Call Now.
         </h2>
         <div className={`front-donation__in wow fadeInUpS${vis}`} style={{ animationDelay: "0.2s" }}>
           <div className="content-entry">
             <p>
-              Backed up drains don&apos;t fix themselves. Our Brooklyn, Queens &amp; Nassau County
-              techs are on the road every day — call us and we&apos;ll get someone out fast.
+              Heating or cooling issues don&apos;t wait for a convenient time. Our Manhattan
+              technicians are on the road 7 days a week — call us and we&apos;ll get someone
+              out the same day.
             </p>
           </div>
           <div className="front-donation__btn-wrap">
             <div className="front-donation__btn">
               <SecondaryButton
-                label="Call (718) 749-1830"
-                href="tel:7187491830"
+                label="Call (646) 493-4904"
+                href="tel:6464934904"
               />
             </div>
           </div>

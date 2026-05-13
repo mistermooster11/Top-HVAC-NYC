@@ -39,12 +39,12 @@ export const programsData: ProgramsPageData = {
 
   hero: {
     bgImage: "/images/IMG_9750-1024x683.jpg",
-    title: "Our Services",
+    title: "Our HVAC Services",
     description: (
       <p>
-        Pipe Monkeys handles every type of drain and sewer issue across
-        Brooklyn, Queens, and Nassau County — from a slow kitchen sink to a
-        fully blocked main line.
+        Top HVAC NYC handles the full range of heating, cooling, and air quality
+        services for Manhattan homes and commercial buildings — from emergency AC
+        repair to annual maintenance programs.
       </p>
     ),
     breadcrumbParentLabel: "Services",
@@ -55,17 +55,15 @@ export const programsData: ProgramsPageData = {
     content: (
       <>
         <p>
-          Every job starts the same way: we diagnose the problem, explain the
-          solution in plain language, and give you the price before any work
-          begins. Our techs carry professional-grade cutters, snakes, augers,
-          and hydro-jetting equipment — so whatever the line throws at us,
-          we&rsquo;re ready.
+          Every job starts with an honest diagnosis. We assess the problem, explain
+          the solution in plain language, and give you the price before any work begins.
+          Our technicians carry the tools and parts needed to resolve most issues on the
+          first visit — no return trips, no wasted time.
         </p>
         <p>
-          We work in residential homes, brownstones, pre-war walk-ups, condos,
-          and multi-family buildings. Same-day scheduling available. Near-instant
-          response for emergencies. Call{" "}
-          <a href="tel:7187491830">(718) 749-1830</a> to get started.
+          We work in apartments, condos, co-ops, commercial spaces, and multi-unit
+          buildings. Licensed and insured. Same-day service available. Call{" "}
+          <a href="tel:6464934904">(646) 493-4904</a> to get started.
         </p>
       </>
     ),
@@ -76,101 +74,107 @@ export const programsData: ProgramsPageData = {
 
   programs: [
     {
-      title: "Main Sewer Line Clearing",
+      title: "AC Repair",
       content: (
         <p>
-          Roots, scale, grease buildup, and heavy blockages in the main line
-          require pro-level equipment — not a standard snake from the hardware
-          store. Our techs use industrial cutters and jetting to restore full
-          flow to your main sewer line and confirm it before leaving. We handle
-          this every day in Brooklyn brownstones, Queens multi-families, and
-          Nassau County homes with long sewer runs.
+          If your AC is running but not cooling, cycling too frequently, or making unusual
+          noise, we diagnose the exact cause before recommending any repair. Most AC repairs
+          — refrigerant recharge, capacitor replacement, contactor failure, coil cleaning —
+          are completed same-day. We service all major brands across Manhattan, 7 days a week.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/main-sewer-lines",
+      learnMoreHref: "/craft-catalog/ac-repair",
     },
     {
-      title: "Kitchen Sink Drain Clearing",
+      title: "Heating Repair",
       content: (
         <p>
-          Grease, food debris, and soap scum are the most common kitchen culprits
-          — and they build up fast in NYC buildings with heavy daily use. We
-          clear kitchen drains using professional cutters and hydro jetting
-          depending on the severity, leaving the line fully open and grease-free.
-          No mess, no damage to pipes, and no recurring clogs if you go with
-          jetting.
+          We repair heating systems of all types — gas furnaces, heat pumps, boilers, and
+          electric systems. If your heat went out or is underperforming, our technicians
+          identify the exact problem, give you the price upfront, and restore your system
+          fast. Same-day emergency response available across all of Manhattan.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/kitchen-sinks",
+      learnMoreHref: "/craft-catalog/heating-repair",
     },
     {
-      title: "Tub & Shower Drain Clearing",
+      title: "AC Installation",
       content: (
         <p>
-          Hair, soap buildup, and mineral deposits accumulate silently until
-          you&rsquo;re standing in ankle-deep water. Our techs remove the
-          blockage cleanly — no torn-up tile, no chemical damage to pipes — and
-          leave the bathroom exactly as they found it. Shoe covers and drop
-          cloths every time.
+          We size new AC systems correctly for your space — not just what&rsquo;s easiest
+          to install. Proper sizing means better efficiency, fewer repairs, and longer
+          equipment life. We work with Carrier, Trane, Lennox, Rheem, Goodman, and Bryant.
+          Permits handled. Full commissioning test included. Note: we do not install window
+          AC units.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/tubs-and-showers",
+      learnMoreHref: "/craft-catalog/ac-installation",
     },
     {
-      title: "Toilet Clog Clearing",
+      title: "Heating Installation",
       content: (
         <p>
-          Stubborn toilet clogs — including foreign objects, excessive paper,
-          and hard-to-reach blockages — are cleared fast with the right auger
-          and technique. We&rsquo;ve retrieved everything from children&rsquo;s
-          toys to full pipe obstructions. No splash, no stress, and we test the
-          flush before we leave.
+          New heating system installations for Manhattan residences and commercial spaces.
+          We calculate heat load properly, select the right equipment for your budget and
+          efficiency goals, handle all required permits, and do a full commissioning test.
+          Brands include Day &amp; Night, Bryant, Carrier, Trane, Lennox, and more.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/toilets",
+      learnMoreHref: "/craft-catalog/heating-installation",
     },
     {
-      title: "Hydro Jetting",
+      title: "Ductless Mini Split Systems",
       content: (
         <p>
-          Snaking clears a path through the clog. Hydro jetting actually scrubs
-          grease, scale, and buildup off the pipe walls — giving you a like-new
-          interior and dramatically reducing repeat clogs. If you&rsquo;ve been
-          dealing with the same drain backing up every few months, jetting is
-          the long-term fix. Available for kitchen lines, main sewer lines, and
-          commercial buildings.
+          The right choice for NYC apartments and older buildings without central ductwork.
+          Mini splits deliver zone-level temperature control with no duct losses and minimal
+          wall penetration. We install and repair all major brands including Mitsubishi,
+          Carrier, and Daikin. Note: we do not install window AC units.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/hydro-jetting",
+      learnMoreHref: "/craft-catalog/ductless-mini-split",
     },
     {
-      title: "Camera Inspection",
+      title: "HVAC Maintenance",
       content: (
         <p>
-          Before we recommend a repair or jetting service on your main line, we
-          can run a camera to show you exactly what&rsquo;s in there — root
-          intrusion, pipe damage, grease buildup, or collapsed sections. You see
-          what we see, in real time, so there&rsquo;s no guesswork and no
-          upselling on work you don&rsquo;t need.
+          Regular tune-ups prevent breakdowns and extend system life. Our visits cover
+          refrigerant check, coil cleaning, electrical inspection, filter replacement,
+          drain line cleaning, thermostat calibration, and a complete system test in both
+          heating and cooling modes. Available as single visits or ongoing agreements.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/camera-inspection",
+      learnMoreHref: "/craft-catalog/hvac-maintenance",
     },
     {
-      title: "Multi-Unit & Commercial Buildings",
+      title: "Indoor Air Quality",
       content: (
         <p>
-          We work with brownstones, pre-war walk-ups, condos, co-ops, and
-          multi-family buildings across Brooklyn and Queens every single day.
-          Stack drain issues, shared main lines, and building-wide backups are
-          all in our wheelhouse. We coordinate with building managers and
-          minimize disruption to tenants throughout the job.
+          We offer a full suite of air quality services: duct replacement, duct sealing,
+          duct cleaning, and air scrubbers that actively neutralize allergens, bacteria,
+          viruses, and odors in your circulating air. For buildings with specific air
+          quality concerns — including healthcare facilities — we also install UV germicidal
+          lighting systems directly into existing HVAC equipment.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/multi-unit-buildings",
+      learnMoreHref: "/craft-catalog/indoor-air-quality",
+    },
+    {
+      title: "Maintenance Program",
+      content: (
+        <p>
+          For property managers, businesses, and building owners who need consistent HVAC
+          coverage without scheduling individual calls. Our programs include scheduled
+          tune-ups, PTAC maintenance, emergency response priority, and water heater
+          inspections. Special packages available for healthcare facilities.
+        </p>
+      ),
+      learnMoreHref: "/craft-catalog/maintenance-program",
     },
   ],
 
-  // No external partners — use service area neighborhoods instead
+  // No external partners — trade client
   partners: [],
 };
+
+export default programsData;

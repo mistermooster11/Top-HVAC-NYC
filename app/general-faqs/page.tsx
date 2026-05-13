@@ -4,6 +4,30 @@ import { useRef, useState } from "react";
 import { useInView } from "framer-motion";
 import SecondaryButton from "@/components/custom/buttons/SecondaryButton";
 
+// FAQPage JSON-LD for rich snippet eligibility
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "How quickly can you get here?",
+      acceptedAnswer: { "@type": "Answer", text: "Same-day service is available across all of Manhattan. Call (646) 493-4904 for an accurate ETA. For HVAC emergencies we prioritize you." } },
+    { "@type": "Question", name: "Do you give upfront pricing?",
+      acceptedAnswer: { "@type": "Answer", text: "Always. We diagnose the issue, explain the solution, and give you the price before any work starts. What we quote is what you pay — period." } },
+    { "@type": "Question", name: "What types of HVAC systems do you work on?",
+      acceptedAnswer: { "@type": "Answer", text: "We service all major residential and commercial HVAC systems — central air, ductless mini splits, gas furnaces, heat pumps, boilers, and electric systems. All major brands including Carrier, Trane, Lennox, Rheem, Goodman, Bryant, Mitsubishi, and Daikin." } },
+    { "@type": "Question", name: "How do I know if I need a repair or a full replacement?",
+      acceptedAnswer: { "@type": "Answer", text: "We diagnose first and tell you honestly. If a repair is the smart move financially, that's what we recommend. If replacement is genuinely the better option, we'll show you the math." } },
+    { "@type": "Question", name: "Do you service apartments, co-ops, and commercial buildings?",
+      acceptedAnswer: { "@type": "Answer", text: "Yes. We work in Manhattan apartments, condos, co-ops, commercial spaces, and multi-unit buildings every day. We coordinate with building supers and property managers." } },
+    { "@type": "Question", name: "What areas of Manhattan do you cover?",
+      acceptedAnswer: { "@type": "Answer", text: "We serve all of Manhattan including Upper East Side, Upper West Side, Harlem, Washington Heights, Midtown, Chelsea, Gramercy, Greenwich Village, SoHo, Tribeca, Lower East Side, Financial District, and more." } },
+    { "@type": "Question", name: "How often should I have my HVAC system serviced?",
+      acceptedAnswer: { "@type": "Answer", text: "Twice a year is ideal — once before cooling season and once before heating season. Regular tune-ups extend equipment life and prevent breakdowns." } },
+    { "@type": "Question", name: "Do you install ductless mini splits in older buildings?",
+      acceptedAnswer: { "@type": "Answer", text: "Yes — it's one of our most common jobs in Manhattan. Older pre-war buildings without central ductwork are well-suited for mini splits. We install Mitsubishi, Carrier, Daikin, and other major brands. Note: we do not install window AC units." } },
+  ],
+};
+
 interface FaqItem {
   title: string;
   content: React.ReactNode;
@@ -15,11 +39,10 @@ const faqItems: FaqItem[] = [
     title: "How quickly can you get here?",
     content: (
       <p>
-        Most calls are scheduled the same day, and we offer near-instant
-        response for urgent clogs. Timing depends on your exact neighborhood,
-        but we move fast. Call us at{" "}
-        <a href="tel:7187491830" className="ia-link">(718) 749-1830</a>{" "}
-        and we&apos;ll give you an accurate ETA on the spot.
+        Same-day service is available across all of Manhattan. Call us at{" "}
+        <a href="tel:6464934904" className="ia-link">(646) 493-4904</a>{" "}
+        and we&apos;ll give you an accurate ETA on the spot. For HVAC emergencies —
+        no heat in winter, no AC in a heat wave — we prioritize you.
       </p>
     ),
   },
@@ -27,79 +50,83 @@ const faqItems: FaqItem[] = [
     title: "Do you give upfront pricing?",
     content: (
       <p>
-        Always. We diagnose the issue, explain the solution, and give you the
-        price before any work starts. No surprises, no upsell games. What we
-        quote is what you pay — period.
+        Always. We diagnose the issue, explain the solution in plain language, and
+        give you the price before a single tool touches your system. No surprises,
+        no upsells. What we quote is what you pay — period.
       </p>
     ),
   },
   {
-    title: "What tools do you use to clear drains?",
+    title: "What types of HVAC systems do you work on?",
     content: (
       <p>
-        We carry professional cutters, snakes, augers, and hydro-jetting
-        equipment on every truck. Your tech will choose the safest and most
-        effective method for your specific line and problem — and explain why
-        before starting.
+        We service all major residential and commercial HVAC systems — central air,
+        ductless mini splits, gas furnaces, heat pumps, boilers, and electric systems.
+        We work on all major brands including Carrier, Trane, Lennox, Rheem, Goodman,
+        Bryant, Mitsubishi, and Daikin.
       </p>
     ),
   },
   {
-    title: "When should I consider hydro jetting instead of snaking?",
+    title: "How do I know if I need a repair or a full replacement?",
     content: (
       <p>
-        Snaking clears a path through the clog. Jetting actually scrubs grease,
-        scale, and buildup off the pipe walls — giving you a cleaner line and
-        much longer-lasting results. If you get repeat clogs in the same drain,
-        jetting is usually the right call. We&apos;ll tell you honestly which
-        one makes sense for your situation.
+        We&apos;ll tell you honestly. Our tech diagnoses the system first and explains
+        exactly what&apos;s failing and why. If a repair is the smart move — financially
+        and for the life of the equipment — that&apos;s what we recommend. We don&apos;t
+        push replacements to run up the ticket. If replacement is genuinely the better
+        option, we&apos;ll show you the math.
       </p>
     ),
   },
   {
-    title: "Do you service apartments and multi-unit buildings?",
+    title: "Do you service apartments, co-ops, and commercial buildings?",
     content: (
       <p>
-        All the time. We work with brownstones, pre-war buildings, walk-ups,
-        condos, co-ops, and multi-family homes across Brooklyn, Queens, and
-        Nassau County every day. We coordinate with building managers and work
-        to minimize disruption to other tenants.
+        All the time. We work in Manhattan apartments, condos, co-ops, commercial spaces,
+        and multi-unit buildings every day. We coordinate with building supers and property
+        managers, and we work to minimize disruption to other tenants or occupants.
       </p>
     ),
   },
   {
-    title: "What areas do you serve?",
+    title: "What areas of Manhattan do you cover?",
     content: (
       <>
-        <p>We serve all of Brooklyn, Queens, and Nassau County including:</p>
+        <p>We serve all of Manhattan, including:</p>
         <p>
-          <strong>Brooklyn:</strong> Williamsburg, Greenpoint, Bushwick,
-          Bed-Stuy, Crown Heights, Park Slope, Sunset Park, Bay Ridge,
-          Bensonhurst, Dyker Heights, Gravesend, Sheepshead Bay, Coney Island
-          and more.
+          Upper East Side, Upper West Side, Harlem, East Harlem, Washington Heights,
+          Inwood, Midtown East, Midtown West, Hell&apos;s Kitchen, Chelsea, Gramercy,
+          Murray Hill, Kips Bay, Flatiron, Union Square, Greenwich Village, West Village,
+          SoHo, Tribeca, Lower East Side, Financial District, Battery Park City, and more.
         </p>
         <p>
-          <strong>Queens:</strong> Astoria, LIC, Maspeth, Flushing, Whitestone,
-          Bayside, Forest Hills, Rego Park, Jackson Heights, Elmhurst, Middle
-          Village and more.
-        </p>
-        <p>
-          <strong>Nassau County:</strong> Valley Stream, Elmont, Franklin
-          Square, West Hempstead, Hempstead, Garden City, Mineola, New Hyde
-          Park, Rockville Centre, Oceanside, Freeport, Merrick, Bellmore,
-          Levittown, East Meadow and more.
+          If you&apos;re not sure whether we cover your building, call us —
+          we almost certainly do.
         </p>
       </>
     ),
   },
   {
-    title: "Do you clean up after the job?",
+    title: "How often should I have my HVAC system serviced?",
     content: (
       <p>
-        Yes — always. Every tech wears shoe covers, lays down drop cloths, and
-        cleans the workspace before leaving. We test the flow, show you the
-        results, and make sure your home is cleaner than we found it. That
-        &apos;s not a bonus — it&apos;s standard.
+        Twice a year is ideal — once before cooling season (spring) and once before
+        heating season (fall). Regular tune-ups extend equipment life, prevent breakdowns,
+        and keep efficiency where it should be. We offer single visits and ongoing
+        maintenance agreements for both residential and commercial clients.
+      </p>
+    ),
+  },
+  {
+    title: "Do you install ductless mini splits in older buildings?",
+    content: (
+      <p>
+        Yes — and it&apos;s one of our most common jobs in Manhattan. Older pre-war
+        buildings without central ductwork are well-suited for mini splits. Minimal
+        wall penetration, zone-level control, and no duct losses. We install and service
+        Mitsubishi, Carrier, Daikin, and other major brands. Note: we do not install
+        window AC units.
       </p>
     ),
   },
@@ -121,6 +148,11 @@ export default function GeneralFaqsPage() {
 
   return (
     <main>
+      {/* FAQPage JSON-LD for rich snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div id="content">
 
         {/* ── Hero ── */}
@@ -197,7 +229,7 @@ export default function GeneralFaqsPage() {
             <div className={`front-donation__in wow fadeInUpS${donationInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
               <div className="content-entry">
                 <p>
-                  Call us at <strong>(718) 749-1830</strong> — our team picks up fast
+                  Call us at <strong>(646) 493-4904</strong> — our team picks up fast
                   and can answer any question, schedule a same-day visit, or give you
                   an honest assessment over the phone.
                 </p>
@@ -205,8 +237,8 @@ export default function GeneralFaqsPage() {
               <div className="front-donation__btn-wrap">
                 <div className="front-donation__btn">
                   <SecondaryButton
-                    label="Call (718) 749-1830"
-                    href="tel:7187491830"
+                    label="Call (646) 493-4904"
+                    href="tel:6464934904"
                   />
                 </div>
               </div>

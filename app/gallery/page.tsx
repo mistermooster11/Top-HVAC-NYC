@@ -5,46 +5,43 @@ import { useInView } from "framer-motion";
 
 /* ── Gallery Data ────────────────────────────────────────────── */
 
+// [TODO: Replace all placeholder images with real before/after job photos from Top HVAC NYC]
 const galleryItems = [
   {
     id: "gallery-1",
-    label: "Main Sewer Line — Crown Heights, Brooklyn",
-    beforeAlt: "Blocked main sewer line before clearing",
-    afterAlt:  "Clear main sewer line after hydro jetting",
-    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
+    label: "AC Repair — Upper East Side",
+    beforeAlt: "AC unit not cooling before service",
+    afterAlt:  "AC unit fully operational after repair",
     before: "/images/IMG_9688-1024x682.jpg",
     after:  "/images/IMG_9750-1024x683.jpg",
-    category: "Main Sewer Line",
+    category: "AC Repair",
   },
   {
     id: "gallery-2",
-    label: "Kitchen Drain — Astoria, Queens",
-    beforeAlt: "Grease-clogged kitchen drain before clearing",
-    afterAlt:  "Kitchen drain fully cleared and flowing",
-    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
-    before: "/images/iStock-530983109-1.jpg",
+    label: "Mini Split Installation — Chelsea",
+    beforeAlt: "Wall before ductless mini split installation",
+    afterAlt:  "Ductless mini split installed and running",
+    before: "/images/IMG_9750-1024x683.jpg",
     after:  "/images/IMG_9688-1024x682.jpg",
-    category: "Kitchen Sink",
+    category: "Ductless Mini Split",
   },
   {
     id: "gallery-3",
-    label: "Hydro Jetting — Nassau County Home",
-    beforeAlt: "Pipe interior with grease buildup",
-    afterAlt:  "Clean pipe interior after hydro jetting",
-    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
-    before: "/images/IMG_9750-1024x683.jpg",
-    after:  "/images/iStock-530983109-1.jpg",
-    category: "Hydro Jetting",
+    label: "Heating System Repair — Midtown",
+    beforeAlt: "Furnace before repair",
+    afterAlt:  "Furnace restored to full operation",
+    before: "/images/IMG_9688-1024x682.jpg",
+    after:  "/images/IMG_9750-1024x683.jpg",
+    category: "Heating Repair",
   },
   {
     id: "gallery-4",
-    label: "Tub Drain — Bay Ridge, Brooklyn",
-    beforeAlt: "Hair-clogged tub drain before clearing",
-    afterAlt:  "Tub drain cleared with no damage to tile",
-    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
-    before: "/images/IMG_9688-1024x682.jpg",
-    after:  "/images/IMG_9750-1024x683.jpg",
-    category: "Tub & Shower",
+    label: "HVAC Maintenance — Tribeca Commercial",
+    beforeAlt: "HVAC unit before maintenance service",
+    afterAlt:  "HVAC unit after full tune-up and cleaning",
+    before: "/images/IMG_9750-1024x683.jpg",
+    after:  "/images/IMG_9688-1024x682.jpg",
+    category: "HVAC Maintenance",
   },
 ];
 
@@ -68,7 +65,6 @@ function GalleryCard({ item, delay }: { item: typeof galleryItems[number]; delay
         padding: "2rem",
       }}
     >
-      {/* Category badge */}
       <span
         style={{
           display: "inline-block",
@@ -84,7 +80,6 @@ function GalleryCard({ item, delay }: { item: typeof galleryItems[number]; delay
         {item.category}
       </span>
 
-      {/* Before / After image pair — large, equal height */}
       <div
         style={{
           display: "grid",
@@ -98,7 +93,6 @@ function GalleryCard({ item, delay }: { item: typeof galleryItems[number]; delay
             style={{
               background: `url(${item.before}) no-repeat 50% 50% / cover`,
               backgroundColor: "#1a2a3a",
-              /* tall on desktop, still readable on mobile */
               aspectRatio: "4 / 3",
               borderRadius: "4px",
               width: "100%",
@@ -165,8 +159,8 @@ export default function GalleryPage() {
               <div className={`sub-heading fadeInUpS wow${heroVis}`}>Real Results</div>
               <div className={`content-entry fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
                 <p>
-                  Every job below was done by a Pipe Monkeys tech in Brooklyn, Queens, or Nassau
-                  County. These are real lines, real homes, and real results — no stock photos.
+                  Every job below was completed by a Top HVAC NYC technician in Manhattan.
+                  These are real systems, real buildings, and real results.
                   {/* [TODO: Replace placeholder images with actual job photos from client] */}
                 </p>
               </div>
@@ -178,9 +172,9 @@ export default function GalleryPage() {
               </div>
               <ul className="quick-links" role="list">
                 <li className={`fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
-                  <a className="ia-link ia-link--arrow" href="tel:7187491830">
+                  <a className="ia-link ia-link--arrow" href="tel:6464934904">
                     <i className="icon-link" />
-                    <span>Call (718) 749-1830</span>
+                    <span>Call (646) 493-4904</span>
                   </a>
                 </li>
                 <li className={`fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.2s" }}>
@@ -218,8 +212,8 @@ export default function GalleryPage() {
             style={{ animationDelay: "0.2s" }}
           >
             <p>
-              Scroll through clogs we&apos;ve cleared across the area. From grease-packed kitchen
-              lines to root-choked main sewers — we document our work and stand behind every job.
+              From emergency AC repairs to full system installations — we document our work
+              and stand behind every job we do in Manhattan.
             </p>
           </div>
           <div
@@ -249,22 +243,22 @@ export default function GalleryPage() {
       >
         <div className="inner inner--slim-1172">
           <div className={`sub-heading wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.1s" }}>
-            Ready to Clear Your Drain?
+            Ready to Get Started?
           </div>
           <h2 className={`h2 wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
-            Same-Day Service Available
+            Same-Day HVAC Service Available
           </h2>
           <div className={`front-donation__in wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
             <div className="content-entry">
               <p>
-                Call <strong>(718) 749-1830</strong> — we&apos;ll give you an honest price
-                before we start, and we won&apos;t leave until the job is done right.
+                Call <strong>(646) 493-4904</strong> — we&apos;ll give you an honest price
+                before we start and won&apos;t leave until your system is running right.
               </p>
             </div>
             <div className="front-donation__btn-wrap">
               <div className="front-donation__btn">
-                <a className="btn btn--primary" href="tel:7187491830">
-                  Call (718) 749-1830
+                <a className="btn btn--primary" href="tel:6464934904">
+                  Call (646) 493-4904
                 </a>
               </div>
             </div>

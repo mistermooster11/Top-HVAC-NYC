@@ -7,52 +7,66 @@ import { useInView } from "framer-motion";
 
 const areas = [
   {
-    slug: "brooklyn",
-    region: "Brooklyn",
-    headline: "Drain & Sewer Specialists in Brooklyn",
+    slug: "upper-manhattan",
+    region: "Upper Manhattan",
+    headline: "HVAC Service in Upper Manhattan",
     description:
-      "Brooklyn has some of the oldest plumbing infrastructure in New York — pre-war pipe systems, clay drain lines in brownstones, and cast iron stacks in walk-ups that have been running for 80+ years. Our techs know exactly what to expect when they pull up to a building in Park Slope vs. Bay Ridge, and they arrive with the right equipment the first time.",
+      "Upper Manhattan — from Harlem to Inwood — is a mix of pre-war apartment buildings, co-ops, and newer high-rise developments. Older buildings often have aging central HVAC systems and limited ductwork, making ductless mini splits a common upgrade. Our technicians know the building stock in this neighborhood well and arrive ready for whatever the system requires.",
     callouts: [
-      "Brownstone & pre-war walk-up specialists",
-      "Stack drain issues in multi-family buildings",
-      "Same-day service, all neighborhoods",
+      "Pre-war building HVAC specialists",
+      "Ductless mini split upgrades for buildings without central ductwork",
+      "Same-day service from Harlem to Inwood",
     ],
     neighborhoods:
-      "Williamsburg • Greenpoint • Bushwick • Bed-Stuy • Crown Heights • Park Slope • Sunset Park • Bay Ridge • Bensonhurst • Dyker Heights • Gravesend • Sheepshead Bay • Coney Island • Flatbush • Canarsie • East New York & More",
+      "Harlem • East Harlem • West Harlem • Morningside Heights • Washington Heights • Inwood • Hamilton Heights • Sugar Hill",
   },
   {
-    slug: "queens",
-    region: "Queens",
-    headline: "Drain & Sewer Specialists in Queens",
+    slug: "upper-east-side-upper-west-side",
+    region: "Upper East Side & Upper West Side",
+    headline: "HVAC Service on the Upper East Side & Upper West Side",
     description:
-      "Queens covers one of the widest mixes of home types in the entire city — from single-family houses in Whitestone and Bayside to dense apartment buildings in Astoria and Flushing. Our team handles everything from slow kitchen drains in a LIC condo to main line backups in a multi-unit Jackson Heights walk-up.",
+      "The Upper East and West Sides are dense with high-end co-ops, condos, and pre-war apartment buildings that require HVAC technicians who understand both the equipment and the building management expectations. We coordinate with supers and building staff, work cleanly, and document every service call.",
     callouts: [
-      "Single-family homes to large apartment buildings",
-      "Grease line clearing for restaurants & commercial kitchens",
-      "Emergency same-day response across all of Queens",
+      "Licensed and insured — meets building board and co-op requirements",
+      "Maintenance programs for property managers",
+      "Full residential and commercial HVAC coverage",
     ],
     neighborhoods:
-      "Astoria • LIC • Maspeth • Flushing • Whitestone • Bayside • Forest Hills • Rego Park • Jackson Heights • Elmhurst • Middle Village • Ridgewood • Woodside • Sunnyside • Jamaica • Howard Beach & More",
+      "Upper East Side • Yorkville • Lenox Hill • Carnegie Hill • Upper West Side • Lincoln Square • Manhattan Valley",
   },
   {
-    slug: "nassau-county",
-    region: "Nassau County",
-    headline: "Drain & Sewer Specialists in Nassau County",
+    slug: "midtown",
+    region: "Midtown Manhattan",
+    headline: "HVAC Service in Midtown Manhattan",
     description:
-      "Nassau County homes sit on longer sewer runs than most NYC properties, and mature tree root systems along those lines are one of the leading causes of main line backups. Our technicians understand how Nassau systems are laid out, where clogs typically form, and how to clear them without damaging the pipe.",
+      "Midtown's mix of commercial buildings, hotels, and high-rise residential properties demands reliable HVAC contractors who can work around occupied spaces, meet building compliance standards, and respond fast. We handle commercial HVAC maintenance programs, emergency repairs, and full system installations for Midtown properties of all sizes.",
     callouts: [
-      "Root intrusion specialists for Nassau main lines",
-      "Hydro jetting for long sewer runs",
-      "Local techs — not dispatched from far away",
+      "Commercial HVAC maintenance programs available",
+      "Emergency response for occupied commercial spaces",
+      "All-brands service: Carrier, Trane, Lennox, Daikin, and more",
     ],
     neighborhoods:
-      "Valley Stream • Elmont • Franklin Square • West Hempstead • Hempstead • Garden City • Mineola • New Hyde Park • Floral Park • Rockville Centre • Oceanside • Baldwin • Freeport • Merrick • Bellmore • Wantagh • Seaford • Massapequa • Levittown • East Meadow • Uniondale • Lynbrook • Malverne • Hewlett & More",
+      "Midtown East • Midtown West • Hell's Kitchen • Murray Hill • Kips Bay • Tudor City • Sutton Place • Turtle Bay",
+  },
+  {
+    slug: "downtown-manhattan",
+    region: "Downtown Manhattan",
+    headline: "HVAC Service in Downtown Manhattan",
+    description:
+      "Downtown Manhattan — Chelsea, Greenwich Village, SoHo, Tribeca, and the Financial District — is one of the most densely packed commercial and residential zones in the country. We serve loft conversions, historic buildings, modern high-rises, and everything in between. Same-day service available throughout the downtown core.",
+    callouts: [
+      "Loft and high-rise HVAC installation specialists",
+      "PTAC service for older residential buildings",
+      "Same-day availability across all downtown neighborhoods",
+    ],
+    neighborhoods:
+      "Chelsea • Gramercy • Flatiron • Union Square • Greenwich Village • West Village • SoHo • NoHo • Nolita • Tribeca • Lower East Side • Financial District • Battery Park City • Two Bridges",
   },
 ];
 
 /* ── Sub-components ─────────────────────────────────────────── */
 
-function AreaSection({ area, reversed }: { area: typeof areas[number]; reversed: boolean }) {
+function AreaSection({ area }: { area: typeof areas[number] }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "0px 0px -60px 0px" });
   const vis = inView ? " is-visible" : "";
@@ -82,8 +96,8 @@ function AreaSection({ area, reversed }: { area: typeof areas[number]; reversed:
               <strong>Neighborhoods served:</strong> {area.neighborhoods}
             </p>
             <p>
-              Not sure if we cover your street?{" "}
-              <a href="tel:7187491830" className="ia-link">Call (718) 749-1830</a>{" "}
+              Not sure if we cover your building?{" "}
+              <a href="tel:6464934904" className="ia-link">Call (646) 493-4904</a>{" "}
               — we almost certainly do.
             </p>
           </div>
@@ -116,7 +130,7 @@ export default function ServiceAreasPage() {
               <span className="post post-page current-item">Service Areas</span>
             </div>
             <h1 className={`ia-white ia-margin-0 fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
-              We Come to You
+              We Serve All of Manhattan
             </h1>
           </div>
         </div>
@@ -127,9 +141,9 @@ export default function ServiceAreasPage() {
               <div className={`sub-heading fadeInUpS wow${heroVis}`}>Coverage Area</div>
               <div className={`content-entry fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
                 <p>
-                  Pipe Monkeys serves all of Brooklyn, Queens, and Nassau County. We don&apos;t
-                  subcontract — our own techs cover every neighborhood, every day, seven days a week.
-                  Same-day scheduling is available across our entire service area.
+                  Top HVAC NYC serves every Manhattan neighborhood — from Inwood to Battery Park.
+                  Our own licensed technicians cover every borough. No subcontracting.
+                  Same-day scheduling available 7 days a week.
                 </p>
               </div>
             </div>
@@ -147,10 +161,10 @@ export default function ServiceAreasPage() {
                     </a>
                   </li>
                 ))}
-                <li className={`fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.4s" }}>
-                  <a className="ia-link ia-link--arrow" href="tel:7187491830">
+                <li className={`fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.5s" }}>
+                  <a className="ia-link ia-link--arrow" href="tel:6464934904">
                     <i className="icon-link" />
-                    <span>Call (718) 749-1830</span>
+                    <span>Call (646) 493-4904</span>
                   </a>
                 </li>
               </ul>
@@ -160,8 +174,8 @@ export default function ServiceAreasPage() {
       </div>
 
       {/* ── Area Sections ── */}
-      {areas.map((area, i) => (
-        <AreaSection key={area.slug} area={area} reversed={i % 2 !== 0} />
+      {areas.map((area) => (
+        <AreaSection key={area.slug} area={area} />
       ))}
 
       {/* ── CTA ── */}
@@ -179,14 +193,14 @@ export default function ServiceAreasPage() {
           <div className={`front-donation__in wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
             <div className="content-entry">
               <p>
-                Our dispatch is fast and our coverage is wide. Call <strong>(718) 749-1830</strong> and
-                we&apos;ll confirm in 30 seconds and get you on the schedule the same day.
+                Our team covers all of Manhattan. Call <strong>(646) 493-4904</strong> and
+                we&apos;ll confirm in 30 seconds and get you scheduled the same day.
               </p>
             </div>
             <div className="front-donation__btn-wrap">
               <div className="front-donation__btn">
-                <a className="btn btn--primary" href="tel:7187491830">
-                  Call (718) 749-1830
+                <a className="btn btn--primary" href="tel:6464934904">
+                  Call (646) 493-4904
                 </a>
               </div>
             </div>

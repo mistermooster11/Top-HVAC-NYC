@@ -10,8 +10,8 @@ export default function ChannelHero({ data }: { data: HeroData }) {
   const inView = useInView(ref, { once: true, margin: "0px 0px -60px 0px" });
   const vis = inView ? " is-visible" : "";
 
-  const parentLabel = data.breadcrumbParentLabel ?? "NCCER for Organizations";
-  const parentHref  = data.breadcrumbParentHref  ?? "/explore/";
+  const parentLabel = data.breadcrumbParentLabel ?? "Our Services";
+  const parentHref  = data.breadcrumbParentHref  ?? "/craft-catalog";
 
   return (
     <div ref={ref} className={`hero-channel ia-bg-dark fadeIn wow${vis}`}>

@@ -4,15 +4,15 @@ import VapeImage from "./VapeImage";
 const stats = [
   {
     stat: "Same-Day",
-    label: "Scheduling Available 7 Days a Week",
+    label: "Emergency HVAC Service Available 7 Days a Week",
     linkText: "Book Service",
     href: "/contact-us",
   },
   {
-    stat: "4.9★",
-    label: "Average Rating — 100+ Google Reviews",
+    stat: "4.8★",
+    label: "Average Rating — 200+ Google Reviews",
     linkText: "See Reviews",
-    href: "https://www.google.com/maps/search/Pipe+Monkeys",
+    href: "https://www.google.com/maps/search/Top+HVAC+NYC",
   },
   {
     stat: "100%",
@@ -32,9 +32,9 @@ export default function Difference() {
 
           {/* Left: heading + first stat */}
           <div className="flex-1">
-            <div className="sub-heading">Why Pipe Monkeys</div>
+            <div className="sub-heading">Why Top HVAC NYC</div>
             <h2 className="h1 mb-[3rem]">
-              Local Pros You Can Actually Count On
+              Manhattan HVAC Pros You Can Actually Count On
             </h2>
             <div className="hidden md:flex flex-wrap gap-[3rem] py-[2rem]">
               <NumberStatsItem item={stats[0]} />
@@ -44,7 +44,7 @@ export default function Difference() {
           {/* Right: photo */}
           <div className="w-full md:w-[54%] shrink-0 relative z-20">
             <div className="front-difference__image">
-              {/* [TODO: Replace with Pipe Monkeys job site or team photo] */}
+              {/* [TODO: Replace with Top HVAC NYC job site or technician photo] */}
               <VapeImage src="/images/IMG_9750-1024x683.jpg" />
             </div>
           </div>

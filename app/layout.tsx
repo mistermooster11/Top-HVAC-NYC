@@ -7,6 +7,7 @@ import "@/styles/channel.css";
 import "@/styles/faq.css";
 import "@/styles/craft-catalog.css";
 import "@/styles/programs.css";
+import "@/styles/client-theme.css";
 import Header from "@/components/custom/header/Header";
 import Footer from "@/components/custom/Footer";
 

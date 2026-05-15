@@ -8,18 +8,18 @@
    ============================================================ */
 
 :root {
-  --brand-primary:        #fd6a3c;      /* CTA buttons, active links, hover fills  */
-  --brand-feature:        #002857;   /* Sections, footer, masthead nav bg       */
-  --brand-topnav:         #002857;    /* Top utility bar background              */
+  --brand-primary:        #61CE70;      /* CTA buttons, active links, hover fills  */
+  --brand-feature:        #133380;   /* Sections, footer, masthead nav bg       */
+  --brand-topnav:         #133380;    /* Top utility bar background              */
   --brand-on-feature:     #ffffff;  /* Text color on feature-bg sections   */
   --brand-on-topnav:      #ffffff;   /* Text color on topnav bar            */
   --brand-border-feature: rgba(255,255,255,0.45); /* Subtle border on feature bg */
 
   /* Mirror into legacy CSS variables so all template code picks them up */
-  --c-orange:             #fd6a3c;
-  --c-navy:               #002857;
-  --color-brand-orange:   #fd6a3c;
-  --color-brand-navy:     #002857;
+  --c-orange:             #61CE70;
+  --c-navy:               #133380;
+  --color-brand-orange:   #61CE70;
+  --color-brand-navy:     #133380;
 }
 
 /* ── ia-bg-dark: Feature Section Background ────────────────
@@ -222,6 +222,6 @@
 /* These are set as inline styles in Testimonial.tsx — no CSS override needed */
 
 /* ── ia-bg-sky Sections ──────────────────────────────────────
-   ia-bg-sky = light sky blue (#a1c5d3) — defined in craft-catalog.css.
+   ia-bg-sky = light sky blue (#EFEFEF) — defined in craft-catalog.css.
    We intentionally do NOT override this here so it stays sky blue.
    ─────────────────────────────────────────────────────────── */

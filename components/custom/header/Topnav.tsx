@@ -13,8 +13,7 @@ const Topnav = ({ onMobileMenuClick }: TopnavProps) => {
 
                 {/* Mobile logo */}
                 <Link href="/" className="block lg:hidden float-left" aria-label="Top HVAC NYC">
-                    {/* [TODO: Replace with Top HVAC NYC logo SVG] */}
-                    <img src="/logos/logo-94.svg" alt="Top HVAC NYC" className="block h-[3.6rem]" />
+                    <img src="/logos/TOP-hvac-logo.png" alt="Top HVAC NYC" className="block h-[3.6rem]" />
                 </Link>
 
                 {/* Phone number — centered on desktop */}

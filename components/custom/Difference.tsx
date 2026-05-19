@@ -44,8 +44,8 @@ export default function Difference() {
           {/* Right: photo */}
           <div className="w-full md:w-[54%] shrink-0 relative z-20">
             <div className="front-difference__image">
-              {/* [TODO: Replace with Top HVAC NYC job site or technician photo] */}
-              <VapeImage src="/images/IMG_9750-1024x683.jpg" />
+              {/* Image: HVAC technician servicing outdoor AC units — hvacairconditionersnyc.com */}
+              <VapeImage src="https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/HVAC-Maintenance.jpg" />
             </div>
           </div>
 

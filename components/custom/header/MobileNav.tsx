@@ -37,7 +37,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
         {/* .mobile-navi__head */}
         <div className="relative px-[2.4rem] py-[1rem] flex items-center min-h-[54px] border-b border-[rgba(97,206,112,.3)]">
           <Link href="/" onClick={onClose} aria-label="Top HVAC NYC">
-            <img src="/logos/logo-long.svg" alt="Top HVAC NYC" className="block h-[3.2rem]" />
+            <img src="/logos/TOP-hvac-logo.png" alt="Top HVAC NYC" className="block h-[3.2rem]" />
           </Link>
           {/* .mobile-navi__close */}
           <button

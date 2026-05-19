@@ -32,9 +32,8 @@ export default function Footer() {
         <div className={`footer__logo fadeInUpS wow${vis}`}>
           <a href="/">
             <span className="sr-only">Top HVAC NYC</span>
-            {/* [TODO: Replace with Top HVAC NYC logo] */}
             <img
-              src="/logos/logo-long.svg"
+              src="/logos/TOP-hvac-logo.png"
               alt="Top HVAC NYC"
               width="220"
               height="48"

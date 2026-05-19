@@ -5,43 +5,43 @@ import { useInView } from "framer-motion";
 
 /* ── Gallery Data ────────────────────────────────────────────── */
 
-// [TODO: Replace all placeholder images with real before/after job photos from Top HVAC NYC]
+// Images sourced from hvacairconditionersnyc.com (see public/json/hvacairconditionersnyc.json)
 const galleryItems = [
   {
     id: "gallery-1",
     label: "AC Repair — Upper East Side",
-    beforeAlt: "AC unit not cooling before service",
-    afterAlt:  "AC unit fully operational after repair",
-    before: "/images/IMG_9688-1024x682.jpg",
-    after:  "/images/IMG_9750-1024x683.jpg",
+    beforeAlt: "HVAC technician diagnosing AC unit before service",
+    afterAlt:  "Outdoor AC condenser unit after repair with service gauges attached",
+    before: "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/HVAC-Maintence.jpg",
+    after:  "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/AC-Repair.png",
     category: "AC Repair",
   },
   {
     id: "gallery-2",
     label: "Mini Split Installation — Chelsea",
-    beforeAlt: "Wall before ductless mini split installation",
-    afterAlt:  "Ductless mini split installed and running",
-    before: "/images/IMG_9750-1024x683.jpg",
-    after:  "/images/IMG_9688-1024x682.jpg",
+    beforeAlt: "Ductless mini split AC system with indoor and outdoor units before installation",
+    afterAlt:  "HVAC technician servicing outdoor AC units after installation",
+    before: "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/Ductless-Mini-Split-AC-System.png",
+    after:  "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/HVAC-Maintenance.jpg",
     category: "Ductless Mini Split",
   },
   {
     id: "gallery-3",
     label: "Heating System Repair — Midtown",
-    beforeAlt: "Furnace before repair",
-    afterAlt:  "Furnace restored to full operation",
-    before: "/images/IMG_9688-1024x682.jpg",
-    after:  "/images/IMG_9750-1024x683.jpg",
+    beforeAlt: "Technician repairing manifold plumbing connections on heating system",
+    afterAlt:  "Completed boiler heating installation with new components",
+    before: "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/Heating-Repair.png",
+    after:  "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/Heating-Installation.jpg",
     category: "Heating Repair",
   },
   {
     id: "gallery-4",
-    label: "HVAC Maintenance — Tribeca Commercial",
-    beforeAlt: "HVAC unit before maintenance service",
-    afterAlt:  "HVAC unit after full tune-up and cleaning",
-    before: "/images/IMG_9750-1024x683.jpg",
-    after:  "/images/IMG_9688-1024x682.jpg",
-    category: "HVAC Maintenance",
+    label: "Duct Cleaning — Tribeca Commercial",
+    beforeAlt: "Air duct with heavy dust and debris buildup before cleaning",
+    afterAlt:  "Clean, clear air duct after professional duct cleaning service",
+    before: "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/Duct-Cleaning.png",
+    after:  "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/HVAC-Maintenance-Program.jpg",
+    category: "Duct Cleaning",
   },
 ];
 

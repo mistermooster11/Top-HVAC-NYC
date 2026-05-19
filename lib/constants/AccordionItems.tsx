@@ -5,7 +5,7 @@ export const accordionItems = [
   {
     id: "accordion-0",
     title: "AC Repair",
-    image: "/images/IMG_9750-1024x683.jpg",
+    image: "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/AC-Repair.png",
     description:
       "If your AC is running but not cooling, cycling too frequently, or making unusual noise, we diagnose the exact cause before recommending any repair. Most repairs are completed same-day across all of Manhattan.",
     learnHref: "/craft-catalog/ac-repair",
@@ -19,7 +19,7 @@ export const accordionItems = [
   {
     id: "accordion-1",
     title: "Heating Repair",
-    image: "/images/IMG_9688-1024x682.jpg",
+    image: "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/Heating-Repair.png",
     description:
       "We repair all heating system types — gas furnaces, heat pumps, boilers, and electric systems. Same-day emergency response available across all of Manhattan.",
     learnHref: "/craft-catalog/heating-repair",
@@ -33,7 +33,7 @@ export const accordionItems = [
   {
     id: "accordion-2",
     title: "Ductless Mini Split Systems",
-    image: "/images/IMG_9750-1024x683.jpg",
+    image: "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/Ductless-Mini-Split-AC-System.png",
     description:
       "The right choice for NYC apartments and older buildings without central ductwork. Zone-level temperature control with minimal wall penetration. We install and repair all major brands.",
     learnHref: "/craft-catalog/ductless-mini-split",
@@ -47,7 +47,7 @@ export const accordionItems = [
   {
     id: "accordion-3",
     title: "HVAC Maintenance",
-    image: "/images/IMG_9688-1024x682.jpg",
+    image: "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/HVAC-Maintenance.jpg",
     description:
       "Regular tune-ups prevent breakdowns and extend system life. Our visits cover refrigerant check, coil cleaning, electrical inspection, filter replacement, drain line cleaning, and a full system test.",
     learnHref: "/craft-catalog/hvac-maintenance",

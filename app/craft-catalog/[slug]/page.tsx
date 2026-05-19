@@ -6,8 +6,52 @@ import RelatedCrafts   from "@/components/custom/craft-catalog/RelatedCrafts";
 import PrimaryButton   from "@/components/custom/buttons/PrimaryButton";
 import { servicePages } from "@/data/craft-catalog/service-pages";
 
-// TODO: Replace PLACEHOLDER_BG with a real service photo per slug
-const PLACEHOLDER_BG = "/images/IMG_9688-1024x682.jpg";
+/**
+ * Hero background images sourced from hvacairconditionersnyc.com
+ * (scraped 2026-05-19 — see public/json/hvacairconditionersnyc.json)
+ */
+const SERVICE_BG: Record<string, string> = {
+  "heating-repair":
+    "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/Heating-Repair.png",
+  "heating-maintenance":
+    "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/HVAC-Maintence-1.jpg",
+  "heating-installation":
+    "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/Heating-Installation.jpg",
+  "heat-pumps":
+    "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/heating-pumps.jpg",
+  "furnace-service":
+    "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/Furnace-Service.png",
+  "ductless-mini-split":
+    "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/Ductless-Mini-Split-AC-System.png",
+  "ac-repair":
+    "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/AC-Repair.png",
+  "ac-installation":
+    "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/AC-Installation.png",
+  "hvac-maintenance":
+    "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/HVAC-Maintenance.jpg",
+  "indoor-air-quality":
+    "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/Duct-Cleaning.png",
+  "duct-replacement":
+    "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/Duct-Replacement-Installation-768x1152.jpg",
+  "duct-sealing":
+    "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/Duct-Sealing.jpg",
+  "duct-cleaning":
+    "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/Duct-Cleaning.png",
+  "air-scrubber":
+    "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/Air-Scrubber-768x576.jpg",
+  "maintenance-program":
+    "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/HVAC-Maintenance-Program.jpg",
+  "uv-germicidal-lights":
+    "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/UV-Germicidal-Lights.png",
+  thermostats:
+    "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/Thermostat.png",
+  "zone-systems":
+    "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/Zone-Systems.png",
+};
+
+/** Fallback hero image when no dedicated photo exists for a slug */
+const FALLBACK_BG =
+  "https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/HVAC-Maintence.jpg";
 
 /* Pre-render all known service slugs at build time */
 export function generateStaticParams() {
@@ -41,7 +85,7 @@ export default async function ServiceDetailPage({
     <main className="pt-76 max-[1150px]:pt-[6.2rem]">
       <CraftHero
         title={data.title}
-        bgImage={PLACEHOLDER_BG}
+        bgImage={SERVICE_BG[slug] ?? FALLBACK_BG}
         breadcrumbs={[
           { label: "Services", href: "/craft-catalog" },
           { label: data.title },

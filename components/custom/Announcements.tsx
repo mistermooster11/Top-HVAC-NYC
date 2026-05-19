@@ -39,7 +39,7 @@ export default function Announcements() {
               <span
                 style={{
                   backgroundImage:
-                    'url(/images/IMG_9688-1024x682.jpg)',
+                    'url(https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/HVAC-Maintence.jpg)',
                   backgroundRepeat: 'no-repeat',
                   backgroundPosition: '50% 50%',
                   backgroundSize: 'cover',
@@ -49,7 +49,7 @@ export default function Announcements() {
                   backgroundColor: '#FFFFFF',
                 }}
               />
-              {/* [TODO: Replace with Top HVAC NYC technician or job site photo] */}
+              {/* Image: HVAC technician using multimeter to diagnose system — hvacairconditionersnyc.com */}
             </div>
           </div>
 

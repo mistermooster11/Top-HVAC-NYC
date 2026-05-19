@@ -38,7 +38,7 @@ export default function ContactPage() {
       {/* ── Hero ── */}
       <CraftHero
         title="Contact Us"
-        bgImage="/images/IMG_9750-1024x683.jpg"
+        bgImage="https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/HVAC-Maintenance-Program.jpg"
         breadcrumbs={[{ label: "Contact Us" }]}
       />
 

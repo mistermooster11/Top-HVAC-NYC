@@ -108,13 +108,14 @@ export default function Hero() {
                   visible ? 'h-full scale-100' : 'h-0 scale-[1.2]',
                 ].join(' ')}
               >
-                {/* TODO: Replace src with a Pipe Monkeys hero image or video */}
+                {/* Hero video — poster uses HVAC maintenance photo from hvacairconditionersnyc.com */}
                 <video
                   loop
                   autoPlay
                   muted
                   playsInline
                   preload="none"
+                  poster="https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/HVAC-Maintence.jpg"
                   className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto max-w-[200%]"
                 >
                   <source

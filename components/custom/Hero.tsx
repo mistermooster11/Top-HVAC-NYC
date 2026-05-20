@@ -100,7 +100,7 @@ export default function Hero() {
               />
             </div>
 
-            <div className="w-full relative overflow-hidden pb-[38%] max-[767px]:pb-[50%] z-10">
+            <div className="w-full relative overflow-hidden pb-[38%] max-[767px]:pb-[56.25%] z-10">
               <div
                 className={[
                   'absolute bottom-0 left-0 right-0',
@@ -108,21 +108,14 @@ export default function Hero() {
                   visible ? 'h-full scale-100' : 'h-0 scale-[1.2]',
                 ].join(' ')}
               >
-                {/* Hero video — poster uses HVAC maintenance photo from hvacairconditionersnyc.com */}
-                <video
-                  loop
-                  autoPlay
-                  muted
-                  playsInline
-                  preload="none"
-                  poster="https://hvacairconditionersnyc.com/wp-content/uploads/2025/04/HVAC-Maintence.jpg"
-                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto max-w-[200%]"
-                >
-                  <source
-                    src="https://www.nccer.org/media/2023/03/Hero-Website-Video-3.mp4"
-                    type="video/mp4"
-                  />
-                </video>
+                {/* Hero video — Cloudflare Stream embed, cover fit */}
+                <iframe
+                  src="https://iframe.cloudflarestream.com/e124c6ea5df62d8df9ee1290b9fae651?autoplay=true&muted=true&loop=true&controls=false&preload=true"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                  className="absolute left-0 top-1/2 -translate-y-1/2 w-full"
+                  style={{ border: 0, aspectRatio: '16/9' }}
+                />
               </div>
             </div>
 
